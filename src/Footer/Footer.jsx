@@ -3,7 +3,7 @@ import site_logo from '../assets/site-logo.png'
 
 const Footer = () => {
     return (
-        <footer className="bg-light mt-5 pt-5">
+        <footer className="bg-light mt-5 pt-5 mb-0">
             <div className='container pb-3 d-flex justify-content-between align-items-center'>
                 <div className='d-flex justify-content-start align-items-center'>
                     <img src={site_logo} alt="Site-footer-logo" style={{ width: '14%' }} />
