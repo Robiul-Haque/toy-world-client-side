@@ -3,7 +3,7 @@ import site_logo from '../assets/site-logo.png'
 
 const Footer = () => {
     return (
-        <footer className="bg-light mt-5 pt-5 mb-0">
+        <footer className="bg-light mt-5 pt-5">
             <div className='container pb-3 d-flex justify-content-between align-items-center'>
                 <div className='d-flex justify-content-start align-items-center'>
                     <img src={site_logo} alt="Site-footer-logo" style={{ width: '14%' }} />
@@ -23,7 +23,7 @@ const Footer = () => {
                 <p className='text-secondary'>West goulchamot 1-no road new bus stand, Faridpur.</p>
             </div>
             <hr className='container' />
-            <p className='fw-semibold text-center text-secondary pt-3'>&copy; KID TOYS 2023</p>
+            <p className='fw-semibold text-center text-secondary pt-3 pb-3 mb-0'>&copy; KID TOYS 2023</p>
         </footer>
     );
 };
