@@ -1,6 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import error_2 from '../../assets/error-2.svg'
+import error_2 from '../../assets/error.svg'
 
 const Error = () => {
     return (
