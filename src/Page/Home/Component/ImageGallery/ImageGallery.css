@@ -1,0 +1,5 @@
+.img-size {
+    width: 22% !important;
+    height: 20vh !important;
+    object-fit: cover !important;
+}
