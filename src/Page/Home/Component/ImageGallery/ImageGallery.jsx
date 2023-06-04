@@ -24,7 +24,7 @@ import './ImageGallery.css'
 const ImageGallery = () => {
     return (
         <div className='container text-center bg-light rounded my-5 py-5'>
-            <h2 className='text-secondary mb-5'>Car Image Gallery</h2>
+            <h2 className='text-secondary mb-5'>Car Gallery</h2>
             <LightGallery
                 speed={900}
                 plugins={[lgThumbnail, lgZoom, lgAutoplay]}
