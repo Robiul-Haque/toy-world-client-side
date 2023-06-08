@@ -7,12 +7,13 @@ const Form = () => {
     const addToy = event => {
         event.preventDefault();
         const form = event.target;
+        const category = form.category.value;
         const name = form.name.value;
         const image = form.image.value;
         const price = form.price.value;
         const rating = parseFloat(form.rating.value);
-        console.log(name, image, price, rating);
-        const addToyData = { name, image, price, rating };
+        console.log(category, name, image, price, rating);
+        const addToyData = { category, name, image, price, rating };
 
         fetch('http://localhost:5000/add-toy', {
             method: 'POST',
@@ -47,6 +48,14 @@ const Form = () => {
                 <div className="col shadow rounded p-md-5">
                     <h3 className="mb-md-5 text-secondary">Add A New Toy</h3>
                     <form onSubmit={addToy} className='px-5'>
+                        <div className="mb-3">
+                            <label className="form-label text-secondary">Category</label>
+                            <select className="form-select" name='category' required>
+                                <option value="Regular car" selected>Regular car</option>
+                                <option value="Sports car">Sports car</option>
+                                <option value="Regular truck">Regular truck</option>
+                            </select>
+                        </div>
                         <div className="mb-3">
                             <label className="form-label text-secondary">Name</label>
                             <input type="text" name='name' className="form-control" placeholder='Toy name' required />
