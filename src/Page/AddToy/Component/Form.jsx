@@ -1,4 +1,6 @@
 // import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
 
@@ -8,8 +10,33 @@ const Form = () => {
         const name = form.name.value;
         const image = form.image.value;
         const price = form.price.value;
-        const rating = form.rating.value;
+        const rating = parseFloat(form.rating.value);
         console.log(name, image, price, rating);
+        const addToyData = { name, image, price, rating };
+
+        fetch('http://localhost:5000/add-toy', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(addToyData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    toast.success('Toy add successful!', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                }
+            })
+
+        form.reset();
     }
 
     return (
@@ -34,10 +61,22 @@ const Form = () => {
                         </div>
                         <div className="mb-4">
                             <label className="form-label text-secondary">Rating</label>
-                            <input type="number" name='rating' className="form-control" placeholder='Toy rating' required />
+                            <input type="text" name='rating' className="form-control" placeholder='Toy rating' required />
                         </div>
                         <input type="submit" value="Add" className='btn btn-dark' />
                     </form>
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
                 </div>
                 <div className="col">
                 </div>
