@@ -17,16 +17,24 @@ const Header = () => {
                             <NavLink to='/' className='nav-link fw-semibold'>Home</NavLink>
                         </li>
                         <li className="nav-item mx-md-3">
-                            <NavLink to='/' className='nav-link fw-semibold'>All Toys</NavLink>
+                            <NavLink to='/all-toy' className='nav-link fw-semibold'>All Toys</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/' className='nav-link fw-semibold'>My Toys</NavLink>
+                            <NavLink to='/my-toy' className='nav-link fw-semibold'>My Toys</NavLink>
                         </li>
                         <li className="nav-item  mx-md-3">
                             <NavLink to='/add-toy' className='nav-link fw-semibold'>Add A Toy</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/' className='nav-link fw-semibold'>Blog</NavLink>
+                            <NavLink to='/blog' className='nav-link fw-semibold'>Blog</NavLink>
+                        </li>
+                    </ul>
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li className="nav-item me-md-3">
+                            <NavLink to='/login' className='nav-link fw-semibold'>Login</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/register' className='nav-link fw-semibold'>Register</NavLink>
                         </li>
                     </ul>
                 </div>
