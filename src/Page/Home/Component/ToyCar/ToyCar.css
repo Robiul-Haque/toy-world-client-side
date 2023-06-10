@@ -1,0 +1,9 @@
+.card-width {
+    width: 20rem !important;
+}
+
+.img-width {
+    width: 100% !important;
+    height: 22vh !important;
+    object-fit: cover !important;
+}
