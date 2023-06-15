@@ -1,14 +1,17 @@
 // import React from 'react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './Form.css'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../Auth/AuthProvider';
 
 const Form = () => {
 
-    const { emailPassLogin, googleLogin} = useContext(AuthContext);
+    const { emailPassLogin, googleLogin } = useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
-    const from = '/';
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    console.log(from);
 
     const loginWithEmailPass = (event) => {
         event.preventDefault();
@@ -17,25 +20,29 @@ const Form = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        setErrorMessage('');
+
         emailPassLogin(email, password)
-            .then(result => {
+            .then(() => {
                 form.reset();
-                console.log(result.user);
-                navigate(from);
+                // console.log(result.user);
+                navigate(from, { replace: true });
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
+                setErrorMessage(error.message);
             })
     }
 
     const socialLogin = () => {
         googleLogin()
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
+                // console.log(result.user);
                 navigate(from);
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
+                setErrorMessage(error.message);
             })
     }
 
@@ -59,7 +66,10 @@ const Form = () => {
                     </form>
                     <p className="text-secondary my-3">Or login with</p>
                     <img onClick={socialLogin} width="45" height="45" className="border rounded-circle p-2 google-icon" src="https://img.icons8.com/material-rounded/24/737373/google-logo.png" alt="google-logo" />
-                    <p className="text-secondary mt-4">You don,t have an account, <Link to='/register' className="text-dark fw-semibold">Register</Link> please</p>
+                    <p className="text-secondary my-4">You don,t have an account, <Link to='/register' className="text-dark fw-semibold">Register</Link> please</p>
+                    {
+                        errorMessage && <p className="alert alert-danger fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/ios-glyphs/30/842029/error--v1.png" alt="error--v1" />{errorMessage}</p>
+                    }
                 </div>
                 <div className="col">
                 </div>

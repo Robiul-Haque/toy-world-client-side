@@ -8,11 +8,13 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [loginUser, setLoginUser] = useState(null);
+    const [loadingSpinner, setLoadingSpinner] = useState(true);
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('auth state changed', currentUser);
+            // console.log('auth state changed', currentUser);
             setLoginUser(currentUser);
+            setLoadingSpinner(false);
         });
         return () => {
             return unSubscribe;
@@ -43,6 +45,7 @@ const AuthProvider = ({ children }) => {
         emailPassLogin,
         googleLogin,
         loginUser,
+        loadingSpinner,
         logOut,
     }
 
