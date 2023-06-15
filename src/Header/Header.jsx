@@ -1,8 +1,24 @@
 // import React from 'react';
+import './Header.css'
 import { NavLink } from 'react-router-dom';
 import site_logo from '../assets/site-logo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../Auth/AuthProvider';
 
 const Header = () => {
+
+    const { loginUser, logOut } = useContext(AuthContext);
+
+    const handelLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('sign out')
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
@@ -30,12 +46,30 @@ const Header = () => {
                         </li>
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item me-md-3">
-                            <NavLink to='/login' className='nav-link fw-semibold'>Login</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/register' className='nav-link fw-semibold'>Register</NavLink>
-                        </li>
+                        {
+                            loginUser ?
+                                <>
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src={loginUser?.photoURL} alt={loginUser?.displayName} title={loginUser?.displayName} className='img-fluid rounded-circle login-user-img' />
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li className='dropdown-item'>
+                                                <NavLink onClick={handelLogOut} className='nav-link fw-semibold'>Logout</NavLink>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </>
+                                :
+                                <>
+                                    <li className="nav-item me-md-3">
+                                        <NavLink to='/login' className='nav-link fw-semibold'>Login</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink to='/register' className='nav-link fw-semibold'>Register</NavLink>
+                                    </li>
+                                </>
+                        }
                     </ul>
                 </div>
             </div>

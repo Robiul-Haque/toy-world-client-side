@@ -1,3 +1,9 @@
 .active {
     color: black !important;
 }
+
+.login-user-img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: cover;
+}
