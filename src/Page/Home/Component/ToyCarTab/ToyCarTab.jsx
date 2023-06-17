@@ -7,7 +7,6 @@ const ToyCarTab = () => {
 
     const [toys, setToy] = useState([]);
     const [activeCarTab, setActiveCarTab] = useState('Regular car');
-    console.log(activeCarTab);
 
     useEffect(() => {
         fetch(`http://localhost:5000/toy/${activeCarTab}`)
