@@ -1,10 +1,12 @@
 // import React from 'react';
 
+import Table from "./Component/Table";
+
 const MyToy = () => {
     return (
-        <div>
-            <h2>My toy</h2>
-        </div>
+        <>
+            <Table></Table>
+        </>
     );
 };
 

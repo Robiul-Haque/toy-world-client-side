@@ -12,12 +12,12 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('auth state changed', currentUser);
-            setLoginUser(currentUser);
+            // console.log('auth state changed', currentUser);
             setLoadingSpinner(false);
+            setLoginUser(currentUser);
         });
         return () => {
-            return unSubscribe;
+            return unSubscribe();
         }
     })
 
@@ -36,7 +36,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const logOut = () => {
-        return signOut(auth)
+        return signOut(auth);
     }
 
 

@@ -7,21 +7,24 @@ import { Navigate, useLocation } from "react-router-dom";
 const PrivetRoute = ({ children }) => {
     const { loadingSpinner, loginUser } = useContext(AuthContext);
     const location = useLocation();
+    console.log();
 
     if (loadingSpinner) {
-        <div className="row">
-            <div className="col-6"></div>
-            <div className="col-1">
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
+        return <>
+            <div className="row">
+                <div className="col-6"></div>
+                <div className="col-1">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
                 </div>
+                <div className="col-5"></div>
             </div>
-            <div className="col-5"></div>
-        </div>
+        </>
     }
 
     if (loginUser?.email) {
-        return children;
+        return children
     } else {
         return <Navigate to='/login' state={{ from: location }} replace />
     }
