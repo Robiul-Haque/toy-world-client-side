@@ -1,37 +1,66 @@
 // import React from 'react';
 
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../Auth/AuthProvider";
+import Modal from "./Modal";
+
 const Table = () => {
+
+    const { loginUser } = useContext(AuthContext);
+    const [myToys, setMyToys] = useState([]);
+    const [toyId, setToyId] = useState('');
+
+    console.log(loginUser?.email);
+    console.log(myToys);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/my-toy/${loginUser?.email}`)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+    }, []);
+
+    const toyDetails = toy_id => {
+        console.log(toy_id);
+        setToyId(toy_id);
+    };
+
     return (
         <div className="container my-5">
             <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Toy Name</th>
+                        <th>Seller Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        myToys.map((myToy, index) => {
+                            return <>
+                                <tr className="align-middle">
+                                    <th scope="row">{index + 1}</th>
+                                    <td><img src={myToy?.image} className="img-fluid w-25 rounded toy-image" /></td>
+                                    <td>{myToy?.name}</td>
+                                    <td>{myToy?.seller_name}</td>
+                                    <td>{myToy?.category}</td>
+                                    <td>{myToy?.price}</td>
+                                    <td>{myToy?.quantity}</td>
+                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</button></td>
+                                    <td><button className="btn btn-dark">Update</button></td>
+                                    <td><button className="btn btn-dark">Delete</button></td>
+                                </tr>
+                            </>
+                        })
+                    }
                 </tbody>
             </table>
+            <Modal toyId={toyId}></Modal>
         </div>
     );
 };

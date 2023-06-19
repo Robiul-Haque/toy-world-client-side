@@ -1,10 +1,12 @@
 // import React from 'react';
 
+import Accordion from "./Component/Accordion";
+
 const Blog = () => {
     return (
-        <div>
-            blog
-        </div>
+        <>
+            <Accordion></Accordion>
+        </>
     );
 };
 
