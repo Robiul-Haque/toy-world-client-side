@@ -9,6 +9,7 @@ import AllToy from "../Page/AllToy/AllToy";
 import MyToy from "../Page/MyToy/MyToy";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import Blog from "../Page/Blog/Blog";
+import Update from "../Page/MyToy/Component/Update";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
             {
                 path: '/my-toy',
                 element: <PrivetRoute><MyToy></MyToy></PrivetRoute>,
+            },
+            {
+                path: '/update-my-toy/:toyId',
+                element: <PrivetRoute><Update></Update></PrivetRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/update-my-toy/${params.toyId}`)
             },
             {
                 path: '/add-toy',

@@ -7,7 +7,6 @@ import { Navigate, useLocation } from "react-router-dom";
 const PrivetRoute = ({ children }) => {
     const { loadingSpinner, loginUser } = useContext(AuthContext);
     const location = useLocation();
-    console.log();
 
     if (loadingSpinner) {
         return <>

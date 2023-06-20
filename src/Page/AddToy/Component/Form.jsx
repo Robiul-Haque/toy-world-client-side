@@ -6,7 +6,6 @@ import { AuthContext } from '../../../Auth/AuthProvider';
 
 const Form = () => {
     const { loginUser } = useContext(AuthContext);
-    console.log(loginUser);
 
     const addToy = event => {
         event.preventDefault();
@@ -17,11 +16,11 @@ const Form = () => {
         const name = form.name.value;
         const image = form.image.value;
         const price = form.price.value;
-        const rating = parseFloat(form.rating.value);
         const quantity = form.quantity.value;
-        console.log(seller_name, email, category, name, image, price, quantity, rating);
-        console.log(loginUser);
-        const addToyData = { seller_name, email, category, name, image, price, rating, quantity };
+        const rating = parseFloat(form.rating.value);
+        const description = form.description.value;
+        console.log(seller_name, email, category, name, image, price, quantity, rating, description);
+        const addToyData = { seller_name, email, category, name, image, price, quantity, rating, description };
 
         fetch('http://localhost:5000/add-toy', {
             method: 'POST',
@@ -98,7 +97,11 @@ const Form = () => {
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" value="Add Toy" className='btn btn-dark mt-2' />
+                        <div className="mx-md-5 px-md-4">
+                            <label className="form-label text-secondary">Toy Description</label>
+                            <textarea name="description" className="form-control" rows='2'></textarea>
+                        </div>
+                        <input type="submit" value="Add Toy" className='btn btn-dark mt-4' />
                     </form>
                     <ToastContainer
                         position="top-right"

@@ -3,15 +3,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Auth/AuthProvider";
 import Modal from "./Modal";
+import { NavLink } from "react-router-dom";
 
 const Table = () => {
 
     const { loginUser } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
     const [toyId, setToyId] = useState('');
-
-    console.log(loginUser?.email);
-    console.log(myToys);
 
     useEffect(() => {
         fetch(`http://localhost:5000/my-toy/${loginUser?.email}`)
@@ -24,9 +22,13 @@ const Table = () => {
         setToyId(toy_id);
     };
 
+    // const myToyUpdate = toy_id => {
+
+    // }
+
     return (
         <div className="container my-5">
-            <table className="table table-hover">
+            <table className="table table-hover table-responsive text-center">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -39,21 +41,22 @@ const Table = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-group-divider">
                     {
                         myToys.map((myToy, index) => {
                             return <>
                                 <tr className="align-middle">
                                     <th scope="row">{index + 1}</th>
-                                    <td><img src={myToy?.image} className="img-fluid w-25 rounded toy-image" /></td>
+                                    <td style={{ width: '15%' }}><img src={myToy?.image} className="img-fluid w-75 rounded" /></td>
                                     <td>{myToy?.name}</td>
                                     <td>{myToy?.seller_name}</td>
                                     <td>{myToy?.category}</td>
                                     <td>{myToy?.price}</td>
                                     <td>{myToy?.quantity}</td>
-                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</button></td>
-                                    <td><button className="btn btn-dark">Update</button></td>
-                                    <td><button className="btn btn-dark">Delete</button></td>
+                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</button>
+                                        <NavLink to={`/update-my-toy/${myToy?._id}`}><button className="btn btn-dark mx-3 my-3">Update</button></NavLink>
+                                        <button className="btn btn-dark">Delete</button>
+                                    </td>
                                 </tr>
                             </>
                         })
