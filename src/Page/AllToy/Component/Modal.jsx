@@ -4,6 +4,7 @@
 const Modal = (props) => {
 
     const { image, seller_name, name, category, price, quantity, description } = props.singleToyDetails || {};
+    console.log(props);
 
     return (
         <div className="modal fade" data-bs-backdrop="static" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

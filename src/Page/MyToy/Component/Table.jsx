@@ -9,7 +9,7 @@ const Table = () => {
 
     const { loginUser } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
-    const [toyId, setToyId] = useState('');
+    const [singleToyDetails, setSingleToyDetails] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/my-toy/${loginUser?.email}`)
@@ -17,9 +17,11 @@ const Table = () => {
             .then(data => setMyToys(data))
     }, []);
 
-    const toyDetails = toy_id => {
-        console.log(toy_id);
-        setToyId(toy_id);
+    const toyDetails = toyId => {
+        fetch(`http://localhost:5000/toy-details/${toyId}`)
+            .then(res => res.json())
+            .then(data => setSingleToyDetails(data))
+
     };
 
     // const myToyUpdate = toy_id => {
@@ -53,7 +55,7 @@ const Table = () => {
                                     <td>{myToy?.category}</td>
                                     <td>{myToy?.price}</td>
                                     <td>{myToy?.quantity}</td>
-                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</button>
+                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
                                         <NavLink to={`/update-my-toy/${myToy?._id}`}><button className="btn btn-dark mx-3 my-3">Update</button></NavLink>
                                         <button className="btn btn-dark">Delete</button>
                                     </td>
@@ -63,7 +65,7 @@ const Table = () => {
                     }
                 </tbody>
             </table>
-            <Modal toyId={toyId}></Modal>
+            <Modal singleToyDetails={singleToyDetails}></Modal>
         </div>
     );
 };

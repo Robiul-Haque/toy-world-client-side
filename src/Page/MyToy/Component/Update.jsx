@@ -3,7 +3,7 @@
 const Update = () => {
     return (
         <div>
-            update
+            update page
         </div>
     );
 };
