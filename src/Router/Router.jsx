@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: '/update-my-toy/:toyId',
                 element: <PrivetRoute><Update></Update></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/update-my-toy/${params.toyId}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/updating-my-toy/${params.toyId}`)
             },
             {
                 path: '/add-toy',

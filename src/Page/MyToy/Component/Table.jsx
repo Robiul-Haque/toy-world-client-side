@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import React from 'react';
 
 import { useContext, useEffect, useState } from "react";
@@ -10,23 +11,23 @@ const Table = () => {
     const { loginUser } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
     const [singleToyDetails, setSingleToyDetails] = useState([]);
+    const [loadingSpinner, setLoadingSpinner] = useState(false);
 
     useEffect(() => {
+        setLoadingSpinner(true);
         fetch(`http://localhost:5000/my-toy/${loginUser?.email}`)
             .then(res => res.json())
-            .then(data => setMyToys(data))
+            .then(data => {
+                setLoadingSpinner(false);
+                setMyToys(data)
+            })
     }, []);
 
     const toyDetails = toyId => {
         fetch(`http://localhost:5000/toy-details/${toyId}`)
             .then(res => res.json())
             .then(data => setSingleToyDetails(data))
-
     };
-
-    // const myToyUpdate = toy_id => {
-
-    // }
 
     return (
         <div className="container my-5">
@@ -43,6 +44,13 @@ const Table = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
+                {
+                    loadingSpinner && <>
+                        <div className="spinner-border mt-5" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    </>
+                }
                 <tbody className="table-group-divider">
                     {
                         myToys.map((myToy, index) => {
@@ -63,6 +71,7 @@ const Table = () => {
                             </>
                         })
                     }
+
                 </tbody>
             </table>
             <Modal singleToyDetails={singleToyDetails}></Modal>
