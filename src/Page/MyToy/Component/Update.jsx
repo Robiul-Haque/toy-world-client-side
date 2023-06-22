@@ -67,8 +67,8 @@ const Update = () => {
                                 </div>
                                 <div className="mb-4">
                                     <label className="form-label text-secondary">Toy Category</label>
-                                    <select className="form-select" name='category' required>
-                                        <option value="Regular car" selected>Regular car</option>
+                                    <select className="form-select" name='category' defaultValue={singleToy?.category} required>
+                                        <option value="Regular car">Regular car</option>
                                         <option value="Sports car">Sports car</option>
                                         <option value="Regular truck">Regular truck</option>
                                     </select>

@@ -19,7 +19,6 @@ const Form = () => {
         const quantity = form.quantity.value;
         const rating = parseFloat(form.rating.value);
         const description = form.description.value;
-        console.log(seller_name, email, category, name, image, price, quantity, rating, description);
         const addToyData = { seller_name, email, category, name, image, price, quantity, rating, description };
 
         fetch('http://localhost:5000/add-toy', {
@@ -29,7 +28,6 @@ const Form = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.insertedId) {
                     toast.success('Toy add successful!', {
                         position: "top-right",

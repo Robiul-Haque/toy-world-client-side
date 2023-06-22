@@ -1,10 +1,12 @@
-// import React from 'react';
-
+import PageTitle from "../../PageTitle/PageTitle";
 import Form from "./Component/Form";
 
 const Login = () => {
     return (
-        <Form></Form>
+        <>
+            <PageTitle title={'Login'}></PageTitle>
+            <Form></Form>
+        </>
     );
 };
 

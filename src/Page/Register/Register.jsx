@@ -1,10 +1,12 @@
-// import React from 'react';
-
+import PageTitle from "../../PageTitle/PageTitle";
 import Form from "./Component/Form";
 
 const Register = () => {
     return (
-        <Form></Form>
+        <>
+            <PageTitle title={'Register'}></PageTitle>
+            <Form></Form>
+        </>
     );
 };
 
