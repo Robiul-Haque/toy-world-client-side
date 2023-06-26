@@ -1,11 +1,11 @@
-// import React from 'react';
+import './Accordion.css'
 
 const Accordion = () => {
     return (
-        <div className="accordion container my-5 py-5" id="accordionExample">
-            <div className="accordion-item">
+        <div className="accordion container" id="accordionExample">
+            <div className="accordion-item text-white accordion-bg-color">
                 <h2 className="accordion-header">
-                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button className="accordion-button text-white bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         What is an access token and refresh token? How do they work and where should we store them on the client-side?
                     </button>
                 </h2>
@@ -19,9 +19,9 @@ const Accordion = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item text-white accordion-bg-color">
                 <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button className="accordion-button collapsed text-white bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Compare SQL and NoSQL databases?
                     </button>
                 </h2>
@@ -35,9 +35,9 @@ const Accordion = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item text-white accordion-bg-color">
                 <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button className="accordion-button collapsed text-white bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         What is express js? What is Nest JS
                     </button>
                 </h2>
@@ -49,9 +49,9 @@ const Accordion = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item text-white accordion-bg-color">
                 <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <button className="accordion-button collapsed text-white bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         What is MongoDB aggregate and how does it work
                     </button>
                 </h2>

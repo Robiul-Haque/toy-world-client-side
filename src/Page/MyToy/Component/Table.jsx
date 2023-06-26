@@ -6,6 +6,7 @@ import { AuthContext } from "../../../Auth/AuthProvider";
 import Modal from "./Modal";
 import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import './Table.css';
 
 const Table = () => {
 
@@ -58,8 +59,8 @@ const Table = () => {
     }
 
     return (
-        <div className="container my-5">
-            <table className="table table-hover table-responsive text-center">
+        <div className="container table-css">
+            <table className="table table-responsive text-center text-white">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -72,11 +73,11 @@ const Table = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody className="table-group-divider">
+                <tbody>
                     {
                         myToys.map((myToy, index) => {
                             return <>
-                                <tr className="align-middle">
+                                <tr className="align-middle table-td">
                                     <th scope="row">{index + 1}</th>
                                     <td style={{ width: '15%' }}><img src={myToy?.image} className="img-fluid w-75 rounded" /></td>
                                     <td>{myToy?.name}</td>
@@ -84,9 +85,10 @@ const Table = () => {
                                     <td>{myToy?.category}</td>
                                     <td>{myToy?.price}</td>
                                     <td>{myToy?.quantity}</td>
-                                    <td><button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
-                                        <NavLink to={`/update-my-toy/${myToy?._id}`}><button className="btn btn-dark mx-3 my-3">Update</button></NavLink>
-                                        <button onClick={() => deleteMyYoy(myToy?._id)} className="btn btn-dark">Delete</button>
+                                    <td>
+                                        <button onClick={() => toyDetails(myToy?._id)} type="button" className="btn btn-color fw-semibold text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">See More</button>
+                                        <NavLink to={`/update-my-toy/${myToy?._id}`}><button className="btn fw-semibold text-dark mx-3 my-3 btn-color">Update</button></NavLink>
+                                        <button onClick={() => deleteMyYoy(myToy?._id)} className="btn fw-semibold text-dark btn-color">Delete</button>
                                     </td>
                                 </tr>
                             </>
@@ -95,7 +97,7 @@ const Table = () => {
                 </tbody>
             </table>
             {
-                loadingSpinner && <div className="text-center mt-5">
+                loadingSpinner && <div className="text-center mt-5 text-white">
                     <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>

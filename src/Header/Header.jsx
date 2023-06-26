@@ -20,10 +20,10 @@ const Header = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-header-color">
             <div className="container">
-                <img src={site_logo} alt="Site-header-logo" className='navbar-brand' style={{ width: '6%' }} />
-                <p className='fw-bold text-secondary'>KID TOYS</p>
+                <img src={site_logo} alt="Site-header-logo" className='navbar-brand' style={{ width: '4%' }} />
+                <p className='fw-bold'>TOY WORLD</p>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

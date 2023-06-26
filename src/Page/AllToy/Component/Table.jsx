@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-// import React from 'react';
 import { useLoaderData } from "react-router-dom";
 import Modal from "./Modal";
 import { useState } from "react";
+import './Table.css';
 
 const Table = () => {
 
@@ -16,8 +16,8 @@ const Table = () => {
     }
 
     return (
-        <div className="container my-5">
-            <table className="table table-hover table-responsive text-center">
+        <div className="container all-toy-table">
+            <table className="table table-responsive text-center text-white">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -30,11 +30,11 @@ const Table = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody className="table-group-divider">
+                <tbody>
                     {
                         allToys.map((toy, index) => {
                             return <>
-                                <tr className="align-middle">
+                                <tr className="align-middle table-td">
                                     <th>{index + 1}</th>
                                     <td style={{ width: '15%' }}><img src={toy?.image} className="img-fluid w-75 rounded toy-image" /></td>
                                     <td>{toy?.name}</td>
@@ -42,7 +42,7 @@ const Table = () => {
                                     <td>{toy?.category}</td>
                                     <td>{toy?.price}</td>
                                     <td>{toy?.quantity}</td>
-                                    <td><button onClick={() => toyDetails(toy._id)} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button></td>
+                                    <td><button onClick={() => toyDetails(toy._id)} type="button" className="btn fw-semibold text-dark btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal">See More</button></td>
                                 </tr>
                             </>
                         })

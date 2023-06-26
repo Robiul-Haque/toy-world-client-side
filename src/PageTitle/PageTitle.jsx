@@ -6,7 +6,7 @@ const PageTitle = ({ title }) => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{title} | KID TOYS</title>
+                <title>{title} | TOY WORLD</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
         </>

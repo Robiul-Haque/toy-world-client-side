@@ -1,3 +1,10 @@
 .google-icon {
     cursor: pointer;
+    border: 2px solid rgba(140, 76, 250, 1);
+    border-radius: 50%;
+    transition: .4s ease;
+}
+
+.google-icon:hover {
+    border: 2px solid rgba(103, 83, 253, 1)
 }

@@ -1,4 +1,3 @@
-// import React from 'react';
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -23,8 +22,8 @@ import './ImageGallery.css'
 
 const ImageGallery = () => {
     return (
-        <div className='container text-center bg-light rounded my-5 py-5'>
-            <h2 className='text-secondary mb-5'>Car Gallery</h2>
+        <div className='container text-center bg-color rounded my-5 py-5'>
+            <h2 className='mb-5 text-white'>Car Gallery</h2>
             <LightGallery
                 speed={900}
                 plugins={[lgThumbnail, lgZoom, lgAutoplay]}

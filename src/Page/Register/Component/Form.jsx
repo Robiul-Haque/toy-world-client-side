@@ -1,5 +1,4 @@
-// import React from 'react';
-
+import './Form.css'
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Auth/AuthProvider";
@@ -52,7 +51,7 @@ const Form = () => {
                 <div className="col">
                 </div>
                 <div className="col shadow rounded p-md-5">
-                    <h3 className="mb-md-4 text-secondary">Register</h3>
+                    <h3 className="mb-md-4 fw-bold form-heading">Create Your Account</h3>
                     <form onSubmit={registerForm} className='px-5'>
                         <div className="mb-3">
                             <label className="form-label text-secondary">Name</label>
@@ -70,11 +69,11 @@ const Form = () => {
                             <label className="form-label text-secondary">Password</label>
                             <input type="password" name='password' className="form-control" placeholder='Enter your new password' required />
                         </div>
-                        <input type="submit" value="Register" className='btn btn-dark' />
+                        <input type="submit" value="Register" className='btn fw-semibold btn-color' />
                     </form>
-                    <p className="text-secondary my-4">You have an already account, <Link to='/login' className="text-dark fw-semibold">Login</Link> please</p>
+                    <p className="text-secondary my-4">You have an already account, <Link to='/login' className="text-light opacity-75 fw-semibold">Login</Link> please</p>
                     {
-                        successMessage && <p className="alert alert-success fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/fluency-systems-filled/48/0f5137/ok--v1.png" alt="ok--v1"/>{successMessage}</p>
+                        successMessage && <p className="alert alert-success fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/fluency-systems-filled/48/0f5137/ok--v1.png" alt="ok--v1" />{successMessage}</p>
                     }
                     {
                         errorMessage && <p className="alert alert-danger fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/ios-glyphs/30/842029/error--v1.png" alt="error--v1" />{errorMessage}</p>

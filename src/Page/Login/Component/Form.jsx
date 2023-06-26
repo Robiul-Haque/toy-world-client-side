@@ -52,7 +52,7 @@ const Form = () => {
                 <div className="col">
                 </div>
                 <div className="col shadow rounded p-md-5">
-                    <h3 className="mb-md-5 text-secondary">Login</h3>
+                    <h3 className="mb-md-5 fw-bold form-heading">Login Your Account</h3>
                     <form onSubmit={loginWithEmailPass} className='px-5'>
                         <div className="mb-3">
                             <label className="form-label text-secondary">Email</label>
@@ -62,11 +62,11 @@ const Form = () => {
                             <label className="form-label text-secondary">Password</label>
                             <input type="password" name='password' className="form-control" placeholder='Your password' required />
                         </div>
-                        <input type="submit" value="Login" className='btn btn-dark' />
+                        <input type="submit" value="Login" className='btn fw-semibold btn-color' />
                     </form>
                     <p className="text-secondary my-3">Or login with</p>
-                    <img onClick={socialLogin} width="45" height="45" className="border rounded-circle p-2 google-icon" src="https://img.icons8.com/material-rounded/24/737373/google-logo.png" alt="google-logo" />
-                    <p className="text-secondary my-4">You don,t have an account, <Link to='/register' className="text-dark fw-semibold">Register</Link> please</p>
+                    <img onClick={socialLogin} width="46" height="46" className="p-2 google-icon" src="https://img.icons8.com/material-sharp/24/6753fd/google-logo.png" alt="google-logo" />
+                    <p className="text-secondary my-4">You don,t have an account, <Link to='/register' className="text-light opacity-75 fw-semibold">Register</Link> please</p>
                     {
                         errorMessage && <p className="alert alert-danger fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/ios-glyphs/30/842029/error--v1.png" alt="error--v1" />{errorMessage}</p>
                     }

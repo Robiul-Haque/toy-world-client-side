@@ -1,11 +1,8 @@
-.card-width {
-    width: 20rem !important;
-}
-
-.img-width {
-    width: 100% !important;
-    height: 22vh !important;
-    object-fit: cover !important;
+.form-heading {
+    background: #5381FD;
+    background: linear-gradient(to right, #5381FD 0%, #6753FD 70%, #8C4CFA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn-color {

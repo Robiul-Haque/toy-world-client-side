@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useEffect, useState } from "react";
 import './ToyCarTab.css'
 import ToyCar from "../ToyCar/ToyCar";
@@ -11,20 +10,16 @@ const ToyCarTab = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/toy/${activeCarTab}`)
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setToy(data);
-            })
+            .then(data => setToy(data))
     }, [activeCarTab]);
 
     const carTab = data => {
-        console.log(data);
         setActiveCarTab(data);
     }
 
     return (
         <div className="container py-5">
-            <h2 className="text-center text-secondary mb-5">Shop By Car Category</h2>
+            <h2 className="text-center text-white mb-5">Shop By Car Category</h2>
             <ul className="nav nav-tabs">
                 <li className="nav-item">
                     <a className={`nav-link text-secondary fw-semibold cursor ${activeCarTab == 'Regular car' ? 'active text-dark' : ''}`} onClick={() => carTab('Regular car')}>Regular Car</a>

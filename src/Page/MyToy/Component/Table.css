@@ -1,11 +1,14 @@
-.card-width {
-    width: 20rem !important;
+.table-css {
+    padding: 7% 0;
 }
 
-.img-width {
-    width: 100% !important;
-    height: 22vh !important;
-    object-fit: cover !important;
+.table-td {
+    transition: .3s ease !important;
+}
+
+.table-td:hover {
+    color: rgb(151, 151, 151) !important;
+    cursor: pointer !important;
 }
 
 .btn-color {

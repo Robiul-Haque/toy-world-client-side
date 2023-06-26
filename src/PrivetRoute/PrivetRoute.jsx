@@ -10,10 +10,10 @@ const PrivetRoute = ({ children }) => {
 
     if (loadingSpinner) {
         return <>
-            <div className="row">
+            <div className="row my-5">
                 <div className="col-6"></div>
                 <div className="col-1">
-                    <div className="spinner-border" role="status">
+                    <div className="spinner-border text-white" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
