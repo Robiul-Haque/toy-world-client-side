@@ -21,7 +21,7 @@ const Form = () => {
         const description = form.description.value;
         const addToyData = { seller_name, email, category, name, image, price, quantity, rating, description };
 
-        fetch('http://localhost:5000/add-toy', {
+        fetch('https://toy-world-weld.vercel.app/add-toy', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(addToyData)

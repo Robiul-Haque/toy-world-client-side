@@ -8,7 +8,7 @@ const ToyCarTab = () => {
     const [activeCarTab, setActiveCarTab] = useState('Regular car');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/${activeCarTab}`)
+        fetch(`https://toy-world-weld.vercel.app/toy/${activeCarTab}`)
             .then(res => res.json())
             .then(data => setToy(data))
     }, [activeCarTab]);

@@ -18,7 +18,7 @@ const Table = () => {
 
     useEffect(() => {
         setLoadingSpinner(true);
-        fetch(`http://localhost:5000/my-toy/${loginUser?.email}`)
+        fetch(`https://toy-world-weld.vercel.app/my-toy/${loginUser?.email}`)
             .then(res => res.json())
             .then(data => {
                 setLoadingSpinner(false);
@@ -27,7 +27,7 @@ const Table = () => {
     }, [reload]);
 
     const toyDetails = toyId => {
-        fetch(`http://localhost:5000/toy-details/${toyId}`)
+        fetch(`https://toy-world-weld.vercel.app/toy-details/${toyId}`)
             .then(res => res.json())
             .then(data => setSingleToyDetails(data))
     };
@@ -36,7 +36,7 @@ const Table = () => {
         const confirmText = confirm("Are you sure you want to delete");
         if (confirmText === true) {
             console.log(confirmText, toyId);
-            fetch(`http://localhost:5000/delete-my-toy/${toyId}`, {
+            fetch(`https://toy-world-weld.vercel.app/delete-my-toy/${toyId}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

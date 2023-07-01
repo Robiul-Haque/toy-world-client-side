@@ -10,7 +10,7 @@ const Table = () => {
     const [singleToyDetails, setSingleToyDetails] = useState([]);
 
     const toyDetails = toyId => {
-        fetch(`http://localhost:5000/toy-details/${toyId}`)
+        fetch(`https://toy-world-weld.vercel.app/toy-details/${toyId}`)
             .then(res => res.json())
             .then(data => setSingleToyDetails(data))
     }

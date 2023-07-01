@@ -14,7 +14,7 @@ const ToyCar = ({ toy }) => {
     const { name, image, price, rating } = toy || {};
 
     const handelToyDetails = (toyId) => {
-        fetch(`http://localhost:5000/toy-car-details/${toyId}`)
+        fetch(`https://toy-world-weld.vercel.app/toy-car-details/${toyId}`)
             .then(res => res.json())
             .then(data => setToyDetails(data));
     }
