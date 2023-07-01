@@ -5,7 +5,7 @@ import kid_3 from '../../../../assets/kid-image-3.jpg';
 
 const KidImage = () => {
     return (
-        <div className='container my-5 py-5 d-flex justify-content-md-between align-items-md-center flex-md-row flex-lg-row flex-column'>
+        <div className='container my-5 py-5 d-flex justify-content-md-between align-items-md-center flex-md-row flex-lg-row flex-column' data-aos="fade-right">
             <div>
                 <h1 className='fw-bolder lh-sm kid-text'>BEST TOY CAR</h1>
                 <h1 className='fw-bolder lh-sm kid-text'>IN TOY WORLD</h1>

@@ -21,7 +21,7 @@ const ToyCar = ({ toy }) => {
 
     return (
         <>
-            <div className="card card-width">
+            <div className="card card-width" data-aos="fade-left">
                 <img src={image} className="card-img-top rounded img-fluid img-width" alt={name} />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>

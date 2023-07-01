@@ -22,7 +22,7 @@ import './ImageGallery.css'
 
 const ImageGallery = () => {
     return (
-        <div className='container text-center bg-color rounded my-5 py-5'>
+        <div className='container text-center bg-color rounded my-5 py-5' data-aos="zoom-in">
             <h2 className='mb-5 text-white fw-bold'>Car Gallery</h2>
             <LightGallery
                 speed={200}

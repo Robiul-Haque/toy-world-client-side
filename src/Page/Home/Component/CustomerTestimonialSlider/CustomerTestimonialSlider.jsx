@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const CustomerTestimonialSlider = () => {
     return (
-        <div className='container px-md-5 my-5 py-5'>
+        <div className='container px-md-5 my-5 py-5' data-aos="zoom-in">
             <h2 className='text-center text-white mb-5 fw-bold'>Customer Review</h2>
             <Swiper
                 spaceBetween={10}

@@ -10,11 +10,13 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!-- lightgallery css file -->
   <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
-  <!-- google font, Roboto and montserrat -->
+  <!-- Google font, Roboto and montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@900&display=swap"
     rel="stylesheet">
+  <!-- Aos css link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>TOY WORLD</title>
 </head>
 
@@ -38,6 +40,16 @@
       licenseKey: 'your_license_key',
       ...other,
       settings,
+    });
+  </script>
+  <!-- Aos script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 100,
+      duration: 600,
+      delay: 200,
+      easing: 'ease'
     });
   </script>
 </body>
