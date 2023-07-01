@@ -18,17 +18,21 @@
     margin: 0 35px;
 }
 
-/* 
-position: relative;
-    z-index: 2;
 
-position: absolute;
-    right: 580px;
-    bottom: -1820px;
-    z-index: 10;
+/* Desktop device */
+@media screen and (min-width: 768px) {}
 
-    position: absolute;
-    right: 855px;
-    bottom: -1850px;
-    z-index: 2;
-*/
+/* Mobile device */
+@media screen and (max-width: 578px) {
+    .kid-img {
+        width: 60% !important;
+        height: 20vh !important;
+        object-fit: cover !important;
+        margin: 15px !important;
+    }
+
+    .kid-img:hover {
+        -webkit-filter: blur(1px);
+        -webkit-box-shadow: 12px 12px 40px rgba(103, 83, 253, 1);
+    }
+}

@@ -1,3 +1,28 @@
 .body-bg-color {
     background-color: rgb(24, 24, 58);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+input,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p,
+small,
+select,
+input,
+textarea,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}

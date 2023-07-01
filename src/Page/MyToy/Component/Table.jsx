@@ -59,8 +59,8 @@ const Table = () => {
     }
 
     return (
-        <div className="container table-css">
-            <table className="table table-responsive text-center text-white">
+        <div className="container table-responsive table-css">
+            <table className="table text-center text-white">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -79,7 +79,7 @@ const Table = () => {
                             return <>
                                 <tr className="align-middle table-td">
                                     <th scope="row">{index + 1}</th>
-                                    <td style={{ width: '15%' }}><img src={myToy?.image} className="img-fluid w-75 rounded" /></td>
+                                    <td style={{ width: '15%' }}><img src={myToy?.image} className="w-100 rounded" /></td>
                                     <td>{myToy?.name}</td>
                                     <td>{myToy?.seller_name}</td>
                                     <td>{myToy?.category}</td>

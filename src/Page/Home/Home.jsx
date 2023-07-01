@@ -5,6 +5,7 @@ import ImageGallery from "./Component/ImageGallery/ImageGallery";
 import KidImage from "./Component/KidImage/KidImage";
 import ToyCarTab from "./Component/ToyCarTab/ToyCarTab";
 import ScrollTopBtn from '../../ScrollTopBtn/ScrollTopBtn';
+import CustomerTestimonialSlider from './Component/CustomerTestimonialSlider/CustomerTestimonialSlider';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <ToyCarTab></ToyCarTab>
             <KidImage></KidImage>
             <ScrollTopBtn></ScrollTopBtn>
+            <CustomerTestimonialSlider></CustomerTestimonialSlider>
         </div>
     );
 };

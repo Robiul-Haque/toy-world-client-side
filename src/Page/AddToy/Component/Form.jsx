@@ -46,14 +46,14 @@ const Form = () => {
     }
 
     return (
-        <div className="container text-center py-md-5">
+        <div className="container text-center py-md-5 py-5">
             <div className="row">
                 <div className="col-md-3">
                 </div>
-                <div className="col-md-6 py-md-5">
-                    <h3 className="mb-md-5 text-white">Add A New Toy</h3>
-                    <form onSubmit={addToy}>
-                        <div className='d-flex justify-content-md-evenly flex-md-row flex-sm-column'>
+                <div className="col-md-6 py-md-5 shadow rounded">
+                    <h3 className="mb-md-5 mb-4 text-white">Add A New Toy</h3>
+                    <form onSubmit={addToy} className="py-4 px-2">
+                        <div className='d-flex justify-content-md-evenly flex-md-row flex-column'>
                             <div>
                                 <div className="mb-4">
                                     <label className="form-label text-light">Seller Name</label>

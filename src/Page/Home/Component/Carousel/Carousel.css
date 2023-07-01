@@ -1,23 +1,25 @@
+/* Desktop device */
+@media screen and (min-width: 768px) {
+    .custom-responsive-img {
+        width: 100% !important;
+        height: 80vh !important;
+        object-fit: cover !important;
+    }
+
+    /* .responsive-width-form {
+        width: 25% !important;
+    } */
+}
+
 /* Mobile device */
 @media screen and (max-width: 578px) {
     .custom-responsive-img {
-        height: 45vh !important;
+        width: 100% !important;
+        height: 35vh !important;
         object-fit: cover !important;
     }
 
     /* .responsive-width-form {
         width: 100% !important;
-    } */
-}
-
-/* Desktop device */
-@media screen and (min-width: 768px) {
-    .custom-responsive-img {
-        height: 80vh !important;
-        object-fit: cover;
-    }
-
-    /* .responsive-width-form {
-        width: 25% !important;
     } */
 }

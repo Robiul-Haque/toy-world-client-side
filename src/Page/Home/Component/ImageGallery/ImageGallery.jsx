@@ -23,46 +23,46 @@ import './ImageGallery.css'
 const ImageGallery = () => {
     return (
         <div className='container text-center bg-color rounded my-5 py-5'>
-            <h2 className='mb-5 text-white'>Car Gallery</h2>
+            <h2 className='mb-5 text-white fw-bold'>Car Gallery</h2>
             <LightGallery
-                speed={900}
+                speed={200}
                 plugins={[lgThumbnail, lgZoom, lgAutoplay]}
             >
                 <a href={img_1}>
-                    <img alt="img1" src={img_1} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img1" src={img_1} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_2}>
-                    <img alt="img2" src={img_2} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_2} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_3}>
-                    <img alt="img2" src={img_3} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_3} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_4}>
-                    <img alt="img2" src={img_4} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_4} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_5}>
-                    <img alt="img2" src={img_5} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_5} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_6}>
-                    <img alt="img2" src={img_6} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_6} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_7}>
-                    <img alt="img2" src={img_7} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_7} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_8}>
-                    <img alt="img2" src={img_8} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_8} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_9}>
-                    <img alt="img2" src={img_9} className='rounded m-2 border border-5 shadow img-size' />
+                    <img alt="img2" src={img_9} className='rounded m-2 border border-5 shadow image-gallery-img' />
                 </a>
                 <a href={img_10}>
-                    <img alt="img2" src={img_10} className='rounded m-2 border border-5 shadow img-size' width='20%' />
+                    <img alt="img2" src={img_10} className='rounded m-2 border border-5 shadow image-gallery-img' width='20%' />
                 </a>
                 <a href={img_11}>
-                    <img alt="img2" src={img_11} className='rounded m-2 border border-5 shadow img-size' width='20%' />
+                    <img alt="img2" src={img_11} className='rounded m-2 border border-5 shadow image-gallery-img' width='20%' />
                 </a>
                 <a href={img_12}>
-                    <img alt="img2" src={img_12} className='rounded m-2 border border-5 shadow img-size' width='20%' />
+                    <img alt="img2" src={img_12} className='rounded m-2 border border-5 shadow image-gallery-img' width='20%' />
                 </a>
             </LightGallery>
         </div>

@@ -48,60 +48,60 @@ const Update = () => {
     }
 
     return (
-        <div className="container text-center my-md-5 py-md-5">
+        <div className="container text-center my-md-5 py-md-5 my-5">
             <div className="row">
                 <div className="col-md-3">
                 </div>
                 <div className="col-md-6 shadow rounded py-md-5">
-                    <h3 className="mb-md-5 text-secondary">Update Toy</h3>
-                    <form onSubmit={updateToy}>
-                        <div className='d-flex justify-content-md-evenly flex-md-row flex-sm-column'>
+                    <h3 className="mb-md-5 mb-4 text-white fw-bold">Update Toy</h3>
+                    <form onSubmit={updateToy} className="py-4 px-2">
+                        <div className='d-flex justify-content-md-evenly flex-md-row flex-column'>
                             <div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Seller Name</label>
-                                    <input type="text" name='seller_name' className="form-control" placeholder='Seller name' defaultValue={loginUser?.displayName} required />
+                                    <label className="form-label text-white">Seller Name</label>
+                                    <input type="text" name='seller_name' className="form-control fw-semibold" placeholder='Seller name' defaultValue={loginUser?.displayName} required />
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Seller Email</label>
-                                    <input type="email" name='email' className="form-control" defaultValue={loginUser?.email} disabled />
+                                    <label className="form-label text-white">Seller Email</label>
+                                    <input type="email" name='email' className="form-control fw-semibold" defaultValue={loginUser?.email} disabled />
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Category</label>
-                                    <select className="form-select" name='category' defaultValue={singleToy?.category} required>
+                                    <label className="form-label text-white">Toy Category</label>
+                                    <select className="form-select fw-semibold" name='category' defaultValue={singleToy?.category} required>
                                         <option value="Regular car">Regular car</option>
                                         <option value="Sports car">Sports car</option>
                                         <option value="Regular truck">Regular truck</option>
                                     </select>
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Name</label>
-                                    <input type="text" name='name' className="form-control" defaultValue={singleToy?.name} required />
+                                    <label className="form-label text-white">Toy Name</label>
+                                    <input type="text" name='name' className="form-control fw-semibold" defaultValue={singleToy?.name} required />
                                 </div>
                             </div>
                             <div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Image</label>
-                                    <input type="url" name='image' className="form-control" defaultValue={singleToy?.image} required />
+                                    <label className="form-label text-white">Toy Image</label>
+                                    <input type="url" name='image' className="form-control fw-semibold" defaultValue={singleToy?.image} required />
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Price</label>
-                                    <input type="number" name='price' className="form-control" defaultValue={singleToy?.price} required />
+                                    <label className="form-label text-white">Toy Price</label>
+                                    <input type="number" name='price' className="form-control fw-semibold" defaultValue={singleToy?.price} required />
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Quantity</label>
-                                    <input type="number" name='quantity' className="form-control" defaultValue={singleToy?.quantity} required min='1' max='100000' />
+                                    <label className="form-label text-white">Toy Quantity</label>
+                                    <input type="number" name='quantity' className="form-control fw-semibold" defaultValue={singleToy?.quantity} required min='1' max='100000' />
                                 </div>
                                 <div className="mb-4">
-                                    <label className="form-label text-secondary">Toy Rating</label>
-                                    <input type="text" name='rating' className="form-control" defaultValue={singleToy?.rating} required />
+                                    <label className="form-label text-white">Toy Rating</label>
+                                    <input type="text" name='rating' className="form-control fw-semibold" defaultValue={singleToy?.rating} required />
                                 </div>
                             </div>
                         </div>
                         <div className="mx-md-5 px-md-4">
-                            <label className="form-label text-secondary">Toy Description</label>
-                            <textarea name="description" className="form-control" defaultValue={singleToy?.description} rows='2'></textarea>
+                            <label className="form-label text-white">Toy Description</label>
+                            <textarea name="description" className="form-control fw-semibold" defaultValue={singleToy?.description} rows='2'></textarea>
                         </div>
-                        <input type="submit" value="Update Toy" className='btn btn-dark mt-4' />
+                        <input type="submit" value="Update Toy" className='btn btn-color fw-semibold mt-4' />
                     </form>
                     <ToastContainer
                         position="top-right"

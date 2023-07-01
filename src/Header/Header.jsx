@@ -1,4 +1,3 @@
-// import React from 'react';
 import './Header.css'
 import { NavLink } from 'react-router-dom';
 import site_logo from '../assets/site-logo.png'
@@ -22,8 +21,9 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-header-color">
             <div className="container">
-                <img src={site_logo} alt="Site-header-logo" className='navbar-brand' style={{ width: '4%' }} />
-                <p className='fw-bold'>TOY WORLD</p>
+                <NavLink to={'/'}>
+                    <img src={site_logo} alt="Site-header-logo" className='navbar-brand site-header-logo' />
+                </NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -55,7 +55,8 @@ const Header = () => {
                                         </a>
                                         <ul className="dropdown-menu">
                                             <li className='dropdown-item'>
-                                                <NavLink onClick={handelLogOut} className='nav-link fw-semibold'>Logout</NavLink>
+                                                <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/exit.png" alt="exit" />
+                                                <NavLink onClick={handelLogOut} className='nav-link fw-semibold d-inline'>Logout</NavLink>
                                             </li>
                                         </ul>
                                     </li>

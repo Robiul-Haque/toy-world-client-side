@@ -16,8 +16,8 @@ const Table = () => {
     }
 
     return (
-        <div className="container all-toy-table">
-            <table className="table table-responsive text-center text-white">
+        <div className="container table-responsive my-md-0 my-5 all-toy-table">
+            <table className="table text-center text-white">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -36,7 +36,7 @@ const Table = () => {
                             return <>
                                 <tr className="align-middle table-td">
                                     <th>{index + 1}</th>
-                                    <td style={{ width: '15%' }}><img src={toy?.image} className="img-fluid w-75 rounded toy-image" /></td>
+                                    <td style={{ width: '15%' }}><img src={toy?.image} className="w-100 rounded toy-image" /></td>
                                     <td>{toy?.name}</td>
                                     <td>{toy?.seller_name}</td>
                                     <td>{toy?.category}</td>

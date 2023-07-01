@@ -11,7 +11,6 @@ const Form = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    console.log(from);
 
     const loginWithEmailPass = (event) => {
         event.preventDefault();
@@ -49,10 +48,10 @@ const Form = () => {
     return (
         <div className="container text-center my-md-5 py-md-5">
             <div className="row">
-                <div className="col">
+                <div className="col-md-4 col-0">
                 </div>
-                <div className="col shadow rounded p-md-5">
-                    <h3 className="mb-md-5 fw-bold form-heading">Login Your Account</h3>
+                <div className="col-md-4 col-12 shadow rounded px-md-4 py-md-5 py-5">
+                    <h3 className="mb-md-5 mb-4 fw-bold form-heading">Login Your Account</h3>
                     <form onSubmit={loginWithEmailPass} className='px-5'>
                         <div className="mb-3">
                             <label className="form-label text-secondary">Email</label>
@@ -64,14 +63,14 @@ const Form = () => {
                         </div>
                         <input type="submit" value="Login" className='btn fw-semibold btn-color' />
                     </form>
-                    <p className="text-secondary my-3">Or login with</p>
+                    <p className="text-secondary my-md-4 mt-5">Or login with</p>
                     <img onClick={socialLogin} width="46" height="46" className="p-2 google-icon" src="https://img.icons8.com/material-sharp/24/6753fd/google-logo.png" alt="google-logo" />
                     <p className="text-secondary my-4">You don,t have an account, <Link to='/register' className="text-light opacity-75 fw-semibold">Register</Link> please</p>
                     {
                         errorMessage && <p className="alert alert-danger fw-semibold" role="alert"><img width="22" height="22" className="me-3" src="https://img.icons8.com/ios-glyphs/30/842029/error--v1.png" alt="error--v1" />{errorMessage}</p>
                     }
                 </div>
-                <div className="col">
+                <div className="col-md-4 col-0">
                 </div>
             </div>
         </div>

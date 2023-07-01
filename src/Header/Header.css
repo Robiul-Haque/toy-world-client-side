@@ -12,3 +12,18 @@
     height: 46px !important;
     object-fit: cover;
 }
+
+.site-header-logo {
+    width: 38%;
+}
+
+
+/* Desktop device */
+@media screen and (min-width: 768px) {}
+
+/* Mobile device */
+@media screen and (max-width: 578px) {
+    .site-header-logo {
+        width: 30%;
+    }
+}

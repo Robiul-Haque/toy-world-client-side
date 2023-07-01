@@ -19,7 +19,7 @@ const ToyCarTab = () => {
 
     return (
         <div className="container py-5">
-            <h2 className="text-center text-white mb-5">Shop By Car Category</h2>
+            <h2 className="text-center text-white mb-5 fw-bold">Shop By Car Category</h2>
             <ul className="nav nav-tabs">
                 <li className="nav-item">
                     <a className={`nav-link text-secondary fw-semibold cursor ${activeCarTab == 'Regular car' ? 'active text-dark' : ''}`} onClick={() => carTab('Regular car')}>Regular Car</a>

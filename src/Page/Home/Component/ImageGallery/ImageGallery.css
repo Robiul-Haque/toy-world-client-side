@@ -3,8 +3,34 @@
     background: linear-gradient(90deg, rgba(83, 129, 253, 1) 0%, rgba(103, 83, 253, 1) 70%, rgba(140, 76, 250, 1) 100%);
 }
 
-.img-size {
+/* .img-size {
     width: 22% !important;
     height: 20vh !important;
     object-fit: cover !important;
+} */
+
+
+
+/* Mobile device */
+@media screen and (max-width: 578px) {
+
+    .image-gallery-img {
+        width: 30% !important;
+        height: 20vh !important;
+        object-fit: cover !important;
+        margin: 5px !important;
+    }
+}
+
+/* Desktop device */
+@media screen and (min-width: 768px) {
+    .image-gallery-img {
+        width: 22% !important;
+        height: 20vh !important;
+        object-fit: cover !important;
+    }
+
+    .responsive-width-form {
+        width: 25% !important;
+    }
 }
