@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             {
                 path: '/all-toy',
                 element: <PrivetRoute><AllToy></AllToy></PrivetRoute>,
-                loader: () => fetch('https://toy-world-weld.vercel.app/all-toy')
+                loader: () => fetch('https://toy-world-mu.vercel.app/all-toy')
             },
             {
                 path: '/my-toy',
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: '/update-my-toy/:toyId',
                 element: <PrivetRoute><Update></Update></PrivetRoute>,
-                loader: ({ params }) => fetch(`https://toy-world-weld.vercel.app/updating-my-toy/${params.toyId}`)
+                loader: ({ params }) => fetch(`https://toy-world-mu.vercel.app/updating-my-toy/${params.toyId}`)
             },
             {
                 path: '/add-toy',

@@ -1,5 +1,5 @@
 .body-bg-color {
-    background-color: rgb(24, 24, 58);
+    background-color: rgb(24, 24, 58) !important;
 }
 
 h1,

@@ -30,19 +30,19 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink to='/' className='nav-link fw-semibold'>Home</NavLink>
+                            <NavLink to='/' className='nav-link fw-semibold text-white'>Home</NavLink>
                         </li>
                         <li className="nav-item mx-md-3">
-                            <NavLink to='/all-toy' className='nav-link fw-semibold'>All Toys</NavLink>
+                            <NavLink to='/all-toy' className='nav-link fw-semibold text-white'>All Toys</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/my-toy' className='nav-link fw-semibold'>My Toys</NavLink>
+                            <NavLink to='/my-toy' className='nav-link fw-semibold text-white'>My Toys</NavLink>
                         </li>
                         <li className="nav-item  mx-md-3">
-                            <NavLink to='/add-toy' className='nav-link fw-semibold'>Add A Toy</NavLink>
+                            <NavLink to='/add-toy' className='nav-link fw-semibold text-white'>Add A Toy</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/blog' className='nav-link fw-semibold'>Blog</NavLink>
+                            <NavLink to='/blog' className='nav-link fw-semibold text-white'>Blog</NavLink>
                         </li>
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

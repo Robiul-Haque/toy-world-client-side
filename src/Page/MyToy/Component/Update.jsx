@@ -23,7 +23,7 @@ const Update = () => {
         const description = form.description.value;
         const updateToyData = { seller_name, email, category, name, image, price, quantity, rating, description };
 
-        fetch(`https://toy-world-weld.vercel.app/update-my-toy/${singleToy._id}`, {
+        fetch(`https://toy-world-mu.vercel.app/update-my-toy/${singleToy._id}`, {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
