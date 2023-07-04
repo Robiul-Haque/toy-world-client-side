@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import './Modal.css';
 
-const Modal = ({ toyDetails }) => {
+const Modal = ({ toyDetails, setToyDetails }) => {
 
     const { name, image, seller_name, category, price, quantity, description } = toyDetails || {};
+    // console.log(toyDetails.name + ',', toyDetails.category + ',', toyDetails.price);
+    console.log(toyDetails);
 
     return (
         <div className="modal fade" data-bs-backdrop="static" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -11,7 +14,7 @@ const Modal = ({ toyDetails }) => {
                 <div className="modal-content all-toy-modal-bg-color">
                     <div className="modal-header">
                         <h1 className="modal-title fs-5 text-white fw-bold" id="exampleModalLabel">{name}</h1>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" onClick={() => setToyDetails(null)} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
                         <div className="d-md-flex gap-4 align-items-center">
@@ -27,7 +30,7 @@ const Modal = ({ toyDetails }) => {
                         <p className='text-light'>Toy Description: <br /><span className="fw-semibold text-white">{description}</span></p>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn fw-semibold btn-color" data-bs-dismiss="modal">Close</button>
+                        <button type="button" onClick={() => setToyDetails(null)} className="btn fw-semibold btn-color" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

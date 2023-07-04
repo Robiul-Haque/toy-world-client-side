@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 const ToyCar = ({ toy }) => {
 
     const { loginUser } = useContext(AuthContext);
-    const [toyDetails, setToyDetails] = useState([]);
+    const [toyDetails, setToyDetails] = useState(null);
 
     const { name, image, price, rating } = toy || {};
 
@@ -45,7 +45,9 @@ const ToyCar = ({ toy }) => {
                     </div>
                 </div>
             </div>
-            <Modal toyDetails={toyDetails}></Modal>
+            {
+                toyDetails && <Modal toyDetails={toyDetails} setToyDetails={setToyDetails}></Modal>
+            }
         </>
     );
 };
