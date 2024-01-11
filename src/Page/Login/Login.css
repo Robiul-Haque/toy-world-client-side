@@ -1,0 +1,16 @@
+.form-heading {
+    background: #5381FD;
+    background: linear-gradient(to right, #5381FD 0%, #6753FD 70%, #8C4CFA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-color {
+    background: rgb(83, 129, 253);
+    background: linear-gradient(90deg, rgba(83, 129, 253, 1) 0%, rgba(103, 83, 253, 1) 70%, rgba(140, 76, 250, 1) 100%);
+    transition: .3s ease !important;
+}
+
+.btn-color:hover {
+    color: white !important;
+}

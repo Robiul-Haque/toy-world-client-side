@@ -1,0 +1,21 @@
+.card-width {
+    width: 20rem !important;
+}
+
+.img-width {
+    width: 100% !important;
+    height: 22vh !important;
+    object-fit: cover !important;
+}
+
+.btn-color {
+    background: rgb(83, 129, 253);
+    background: linear-gradient(90deg, rgba(83, 129, 253, 1) 0%, rgba(103, 83, 253, 1) 70%, rgba(140, 76, 250, 1) 100%);
+    transition: .3s ease !important;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: 400; */
+}
+
+.btn-color:hover {
+    color: white !important;
+}

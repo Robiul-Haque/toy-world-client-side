@@ -1,0 +1,8 @@
+.my-toy-modal-bg-color {
+    background-color: rgba(24, 24, 58, 0.829);
+}
+
+.btn-color {
+    background: rgb(83, 129, 253);
+    background: linear-gradient(90deg, rgba(83, 129, 253, 1) 0%, rgba(103, 83, 253, 1) 70%, rgba(140, 76, 250, 1) 100%);
+}

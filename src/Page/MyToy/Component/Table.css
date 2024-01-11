@@ -1,0 +1,22 @@
+.table-css {
+    padding: 7% 0;
+}
+
+.table-td {
+    transition: .3s ease !important;
+}
+
+.table-td:hover {
+    color: rgb(151, 151, 151) !important;
+    cursor: pointer !important;
+}
+
+.btn-color {
+    background: rgb(83, 129, 253);
+    background: linear-gradient(90deg, rgba(83, 129, 253, 1) 0%, rgba(103, 83, 253, 1) 70%, rgba(140, 76, 250, 1) 100%);
+    transition: .3s ease !important;
+}
+
+.btn-color:hover {
+    color: white !important;
+}
